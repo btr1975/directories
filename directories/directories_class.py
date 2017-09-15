@@ -8,7 +8,7 @@ __copyright__ = "Copyright (c) 2017, Benjamin P. Trachtenberg"
 __credits__ = 'Benjamin P. Trachtenberg'
 __license__ = ''
 __status__ = 'prod'
-__version_info__ = (1, 0, 1, __status__)
+__version_info__ = (1, 0, 2, __status__)
 __version__ = '.'.join(map(str, __version_info__))
 __maintainer__ = 'Benjamin P. Trachtenberg'
 __email__ = 'e_ben_75-python@yahoo.com'
@@ -32,14 +32,9 @@ class Directories(object):
     os.path.dirname(os.path.realpath(sys.argv[0]))
     os.path.dirname(os.path.realpath(__file__))
 
-    You can change behavior by putting a config.yml in the Data directory in the following format, the only directory
+    !!!  config.yml !!!
+    You can change behavior by modifying config.yml in the Data directory, the only directory
     you can not change is the Data directory
-    ---
-    config:
-        input_directory:
-        output_directory:
-        logging_directory:
-        logging_level:
 
     You can also add more directories adding the add_directories kwarg, and giving it a dict of values
 
@@ -49,7 +44,13 @@ class Directories(object):
         self.logging_level = logging.WARNING
         self.data_dir = os.path.join(self.base_dir, 'Data')
         pdt.verify_directory('Data', self.base_dir, directory_create=True)
-        self.yml_config_data = open(os.path.join(self.data_dir, 'config.yml'))
+        try:
+            self.yml_config_data = open(os.path.join(self.data_dir, 'config.yml'))
+
+        except FileNotFoundError as e:
+            self.__create_config_yml_file()
+            self.yml_config_data = open(os.path.join(self.data_dir, 'config.yml'))
+
         self.dir_config = safe_load(self.yml_config_data).get('config')
 
         self.input_dir = self.__set_directory('input_directory', 'Input')
@@ -153,6 +154,23 @@ class Directories(object):
 
         """
         return pdt.list_files_in_directory(self.input_dir)
+
+    def __create_config_yml_file(self):
+        """
+        Method to create a config.yml if one does not exist
+        :return:
+            None
+
+        """
+        temp_list = list()
+        temp_list.append('---  # Version 1.0.0')
+        temp_list.append('config:')
+        temp_list.append('    input_directory: ')
+        temp_list.append('    output_directory: ')
+        temp_list.append('    logging_directory: ')
+        temp_list.append('    logging_level: ')
+        temp_list.append('# Logging level is 3 by default, highest is 1 lowest is 5')
+        pdt.list_to_file(temp_list, 'config.yml', self.data_dir)
 
     def get_tab_completion(self):
         """

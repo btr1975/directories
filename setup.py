@@ -20,7 +20,7 @@ tests_require = [
 
 setup(
     name='directories',
-    version='1.0.1',
+    version='1.0.2',
     python_requires='~=3.5',
     description='This is a class that helps make dealing with your scripts directories easier',
     keywords='dir class directories yml',
