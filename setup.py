@@ -20,8 +20,8 @@ tests_require = [
 
 setup(
     name='directories',
-    version='1.0.2',
-    python_requires='~=3.5',
+    version='1.0.3',
+    python_requires='~=3.3',
     description='This is a class that helps make dealing with your scripts directories easier',
     keywords='dir class directories yml',
     url='https://github.com/btr1975/directories',
