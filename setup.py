@@ -8,7 +8,6 @@ install_requires = [
     'persistentdatatools >= 2.2.7, < 3',
     'pyyaml >= 3.1.2, < 4',
     'pyreadline >=2.1, < 3;platform_system=="Windows"',
-    'readline;platform_system=="Linux"'
 ]
 
 tests_require = [
@@ -17,7 +16,7 @@ tests_require = [
 
 setup(
     name='directories',
-    version='1.0.4',
+    version='1.0.5',
     python_requires='~=3.3',
     description='This is a class that helps make dealing with your scripts directories easier',
     keywords='dir class directories yml',

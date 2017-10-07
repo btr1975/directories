@@ -24,9 +24,7 @@ Requirements
 
 -  persistentdatatools==2.2.7
 -  PyYAML==3.12
--  pyreadline==2.1 ; sys\_platform == 'win32'
--  readline ; sys\_platform == 'linux'
-
+-  pyreadline >=2.1, < 3;platform_system==Windows
 Installation
 ~~~~~~~~~~~~
 
