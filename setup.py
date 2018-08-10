@@ -7,7 +7,7 @@ packages = [
 install_requires = [
     'persistentdatatools >= 2.2.7, < 3',
     'pyyaml >= 3.1.2, < 4',
-    'pyreadline >=2.1, < 3;sys_platform=="win32"',
+    'pyreadline ==2.1;sys_platform=="win32"',
 ]
 
 tests_require = [

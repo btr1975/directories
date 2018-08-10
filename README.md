@@ -13,7 +13,7 @@
 
 * persistentdatatools==2.2.8
 * PyYAML==3.12
-* pyreadline >=2.1, < 3;platform_system==Windows
+* pyreadline >=2.1, < 3;sys_platform=="win32"
 
 ### Installation
 
