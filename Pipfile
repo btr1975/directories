@@ -9,6 +9,6 @@ url = "https://pypi.org/simple"
 python_version = "3.5"
 
 [packages]
-persistentdatatools = "==2.2.8"
+persistentdatatools = "==2.2.9"
 pyreadline = {version = "==2.1", sys_platform = "== 'win32'"}
 PyYAML = "==3.12"
