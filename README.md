@@ -12,7 +12,7 @@
 
 ### Requirements
 
-* persistentdatatools==2.2.8
+* persistentdatatools==2.2.9
 * PyYAML==3.12
 * pyreadline >=2.1, < 3;sys_platform=="win32"
 

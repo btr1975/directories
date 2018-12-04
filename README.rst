@@ -19,12 +19,15 @@ Docker Hub: `Docker Hub <https://hub.docker.com/r/btr1975>`__
 PyPi Page for `directories <https://pypi.python.org/pypi/directories>`__
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Ansible Galaxy: `My Ansible Galaxy <https://galaxy.ansible.com/btr1975/>`__
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Requirements
 ~~~~~~~~~~~~
 
--  persistentdatatools==2.2.7
+-  persistentdatatools==2.2.9
 -  PyYAML==3.12
--  pyreadline ==2.1 ;sys_platform=="win32"
+-  pyreadline >=2.1, < 3;sys\_platform=="win32"
 
 Installation
 ~~~~~~~~~~~~
