@@ -8,6 +8,7 @@
 ### LinkedIn: [Ben Trachtenberg](https://www.linkedin.com/in/ben-trachtenberg-3a78496)
 ### Docker Hub: [Docker Hub](https://hub.docker.com/r/btr1975)
 ### PyPi Page for [directories](https://pypi.python.org/pypi/directories)
+### Ansible Galaxy: [My Ansible Galaxy](https://galaxy.ansible.com/btr1975/)
 
 ### Requirements
 
